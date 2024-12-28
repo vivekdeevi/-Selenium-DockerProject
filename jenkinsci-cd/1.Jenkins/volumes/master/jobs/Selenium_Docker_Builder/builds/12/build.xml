@@ -12,16 +12,16 @@
       </causeBag>
     </hudson.model.CauseAction>
     <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.21-458.vcf496cb_839e4">
-      <queuingDurationMillis>3</queuingDurationMillis>
+      <queuingDurationMillis>2</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
       <buildableDurationMillis>0</buildableDurationMillis>
-      <waitingDurationMillis>1</waitingDurationMillis>
+      <waitingDurationMillis>0</waitingDurationMillis>
     </jenkins.metrics.impl.TimeInQueueAction>
     <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@744.v5b_556ee7c253">
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2218.v56d0cda_37c72">
-      <stagesUUID>53f91521-e964-4811-9cd9-744bd5e510fb</stagesUUID>
+      <stagesUUID>e677206e-739f-4977-928b-221c26bd7d78</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2218.v56d0cda_37c72">
           <stages>
@@ -102,7 +102,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>53f91521-e964-4811-9cd9-744bd5e510fb</uuid>
+            <uuid>e677206e-739f-4977-928b-221c26bd7d78</uuid>
           </stages>
           <agent>
             <agentType>
@@ -112,16 +112,56 @@
         </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
       </pipelineDefs>
     </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <hudson.plugins.git.util.BuildData plugin="git@5.6.0">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/main</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@6.1.0">
+              <sha1>b130914e8d4effc9c7af46c215488a0d853b619f</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/main</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>12</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/vivekdeevi/Selenium-DockerProject.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@427.v4ca_6512e7df1">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/vivekdeevi/Selenium-DockerProject.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.21-458.vcf496cb_839e4">
+      <queuingDurationMillis>76</queuingDurationMillis>
+      <blockedDurationMillis>0</blockedDurationMillis>
+      <buildableDurationMillis>66</buildableDurationMillis>
+      <waitingDurationMillis>5</waitingDurationMillis>
+      <executingDurationMillis>90511</executingDurationMillis>
+      <workUnitCount>1</workUnitCount>
+    </jenkins.metrics.impl.SubTaskTimeInQueueAction>
   </actions>
-  <queueId>35</queueId>
-  <timestamp>1735374593674</timestamp>
-  <startTime>1735374593769</startTime>
-  <result>FAILURE</result>
-  <duration>4084907</duration>
+  <queueId>46</queueId>
+  <timestamp>1735378707214</timestamp>
+  <startTime>1735378707242</startTime>
+  <result>SUCCESS</result>
+  <duration>157075</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
-    <result>FAILURE</result>
+    <result>SUCCESS</result>
     <script>pipeline{&#xd;
 	&#xd;
 	agent any&#xd;
@@ -148,42 +188,68 @@
 	}&#xd;
 }</script>
     <loadedScripts class="linked-hash-map"/>
-    <persistedClean>true</persistedClean>
     <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>764678843</long>
+        <long>2039882694</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>192298109</long>
+        <long>9091526881</long>
       </entry>
       <entry>
         <string>runQueue</string>
-        <long>2825270397</long>
+        <long>38356559738</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>1987820607</long>
+        <long>35570663529</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>39047925</long>
+        <long>3480317705</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>1111247526</long>
+        <long>24816026741</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set"/>
     <sandbox>true</sandbox>
-    <iota>10</iota>
-    <head>8:10</head>
+    <iota>31</iota>
+    <head>1:31</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
-    <storageDir>workflow-fallback</storageDir>
+    <storageDir>workflow-completed</storageDir>
   </execution>
   <completed>true</completed>
-  <checkouts class="hudson.util.PersistedList"/>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@5.6.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/vivekdeevi/Selenium-DockerProject.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/main</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.CleanCheckout>
+            <deleteUntrackedNestedRepositories>false</deleteUntrackedNestedRepositories>
+          </hudson.plugins.git.extensions.impl.CleanCheckout>
+        </extensions>
+      </scm>
+      <node>node1</node>
+      <workspace>C:\Users\SDDVIVE\eclipse-workspace\Selenium-DockerProject\jenkinsci-cd\1.Jenkins\volumes\node\workspace\Selenium_Docker_Builder</workspace>
+      <changelogFile>/var/jenkins_home/jobs/Selenium_Docker_Builder/builds/12/changelog13667032507487250797.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
 </flow-build>

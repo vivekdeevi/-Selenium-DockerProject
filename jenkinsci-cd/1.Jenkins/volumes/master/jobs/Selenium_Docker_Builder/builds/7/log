@@ -1,0 +1,23 @@
+Started by user [8mha:////4IN/L7h0N877zlszTjRJ4qXTgzBGdHoKyNZ0Jg15AQqRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+hudson.plugins.git.GitException: Command "git fetch --tags --force --progress --prune -- origin +refs/heads/main:refs/remotes/origin/main" returned status code 128:
+stdout: 
+stderr: remote: Enumerating objects: 3184, done.        
+Receiving objects:   0% (1/3184)Receiving objects:   1% (32/3184)Receiving objects:   2% (64/3184), 244.01 KiB | 382.00 KiB/sReceiving objects:   2% (73/3184), 1.36 MiB | 1.21 MiB/s    Receiving objects:   3% (96/3184), 1.36 MiB | 1.21 MiB/sReceiving objects:   4% (128/3184), 1.36 MiB | 1.21 MiB/sReceiving objects:   5% (160/3184), 1.36 MiB | 1.21 MiB/sReceiving objects:   5% (176/3184), 11.21 MiB | 5.27 MiB/sReceiving objects:   6% (192/3184), 11.21 MiB | 5.27 MiB/sReceiving objects:   7% (223/3184), 11.21 MiB | 5.27 MiB/sReceiving objects:   8% (255/3184), 11.21 MiB | 5.27 MiB/sReceiving objects:   9% (287/3184), 11.21 MiB | 5.27 MiB/sReceiving objects:  10% (319/3184), 11.21 MiB | 5.27 MiB/sReceiving objects:  11% (351/3184), 11.21 MiB | 5.27 MiB/sReceiving objects:  12% (383/3184), 11.21 MiB | 5.27 MiB/sReceiving objects:  12% (398/3184), 21.83 MiB | 6.98 MiB/sReceiving objects:  12% (408/3184), 33.27 MiB | 8.06 MiB/sReceiving objects:  13% (414/3184), 33.27 MiB | 8.06 MiB/sReceiving objects:  13% (433/3184), 38.52 MiB | 8.32 MiB/sReceiving objects:  14% (446/3184), 42.68 MiB | 9.43 MiB/sReceiving objects:  15% (478/3184), 42.68 MiB | 9.43 MiB/sReceiving objects:  16% (510/3184), 42.68 MiB | 9.43 MiB/sReceiving objects:  17% (542/3184), 42.68 MiB | 9.43 MiB/sReceiving objects:  18% (574/3184), 42.68 MiB | 9.43 MiB/sReceiving objects:  19% (605/3184), 49.03 MiB | 10.59 MiB/sReceiving objects:  20% (637/3184), 49.03 MiB | 10.59 MiB/sReceiving objects:  21% (669/3184), 49.03 MiB | 10.59 MiB/sReceiving objects:  21% (693/3184), 54.29 MiB | 10.87 MiB/serror: RPC failed; curl 56 Recv failure: Connection reset by peer
+error: 6590 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2848)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:2184)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:635)
+	at PluginClassLoader for git//jenkins.plugins.git.GitSCMFileSystem$BuilderImpl.build(GitSCMFileSystem.java:408)
+Caused: java.io.IOException
+	at PluginClassLoader for git//jenkins.plugins.git.GitSCMFileSystem$BuilderImpl.build(GitSCMFileSystem.java:413)
+	at PluginClassLoader for scm-api//jenkins.scm.api.SCMFileSystem.of(SCMFileSystem.java:219)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:126)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:73)
+	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:311)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:445)
+Finished: FAILURE

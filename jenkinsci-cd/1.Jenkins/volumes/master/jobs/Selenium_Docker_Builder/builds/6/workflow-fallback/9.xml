@@ -1,0 +1,7 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@936.v9fa_77211ca_e1">
+  <node class="org.jenkinsci.plugins.workflow.graph.FlowStartNode" plugin="workflow-api@1336.vee415d95c521">
+    <parentIds/>
+    <id>9</id>
+  </node>
+</Tag>

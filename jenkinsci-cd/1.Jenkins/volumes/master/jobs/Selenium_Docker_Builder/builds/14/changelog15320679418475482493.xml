@@ -1,0 +1,10 @@
+commit 5b6e408bc15fb924416ebe3603b78e7f0a79c221
+tree 050e358f497e3e64adaf33cf651dab079f63b14f
+parent b130914e8d4effc9c7af46c215488a0d853b619f
+author Vivek <vivek.d9@outlook.com> 2024-12-28 17:59:09 +0800
+committer Vivek <vivek.d9@outlook.com> 2024-12-28 17:59:09 +0800
+
+    updated script with dockerhub login and pwd
+
+
+:100644 100644 7024041e697a4215064352994143054fcf3d5be3 887b5c604ce524e513284202bbb7dc52621c171f M	Jenkinsfile

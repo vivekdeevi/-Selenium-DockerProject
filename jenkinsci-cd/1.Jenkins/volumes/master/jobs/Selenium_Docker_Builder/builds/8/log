@@ -1,0 +1,23 @@
+Started by user [8mha:////4IN/L7h0N877zlszTjRJ4qXTgzBGdHoKyNZ0Jg15AQqRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+hudson.plugins.git.GitException: Command "git fetch --tags --force --progress --prune -- origin +refs/heads/main:refs/remotes/origin/main" returned status code 128:
+stdout: 
+stderr: remote: Enumerating objects: 3184, done.        
+Receiving objects:   0% (1/3184)Receiving objects:   1% (32/3184)Receiving objects:   2% (64/3184)Receiving objects:   3% (96/3184), 1.94 MiB | 3.87 MiB/sReceiving objects:   4% (128/3184), 1.94 MiB | 3.87 MiB/sReceiving objects:   5% (160/3184), 1.94 MiB | 3.87 MiB/sReceiving objects:   5% (176/3184), 7.66 MiB | 5.10 MiB/sReceiving objects:   5% (177/3184), 10.73 MiB | 5.36 MiB/sReceiving objects:   6% (192/3184), 10.73 MiB | 5.36 MiB/sReceiving objects:   7% (223/3184), 10.73 MiB | 5.36 MiB/sReceiving objects:   8% (255/3184), 10.73 MiB | 5.36 MiB/sReceiving objects:   9% (287/3184), 13.71 MiB | 5.48 MiB/sReceiving objects:  10% (319/3184), 13.71 MiB | 5.48 MiB/sReceiving objects:  11% (351/3184), 13.71 MiB | 5.48 MiB/sReceiving objects:  12% (383/3184), 13.71 MiB | 5.48 MiB/sReceiving objects:  12% (398/3184), 20.45 MiB | 5.84 MiB/serror: RPC failed; curl 56 Recv failure: Connection reset by peer
+error: 774 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2848)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:2184)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:635)
+	at PluginClassLoader for git//jenkins.plugins.git.GitSCMFileSystem$BuilderImpl.build(GitSCMFileSystem.java:408)
+Caused: java.io.IOException
+	at PluginClassLoader for git//jenkins.plugins.git.GitSCMFileSystem$BuilderImpl.build(GitSCMFileSystem.java:413)
+	at PluginClassLoader for scm-api//jenkins.scm.api.SCMFileSystem.of(SCMFileSystem.java:219)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:126)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:73)
+	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:311)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:445)
+Finished: FAILURE
