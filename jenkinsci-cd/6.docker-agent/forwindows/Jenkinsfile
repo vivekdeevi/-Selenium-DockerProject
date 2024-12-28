@@ -1,0 +1,23 @@
+pipeline {
+    agent {
+        docker {
+            image "alpine"
+        }
+    }
+
+    environment {
+        WORKDIR = sh(script: 'pwd', returnStdout: true).trim().replace('C:', '/c').replace('\\', '/')
+    }
+
+    stages {
+        stage('access-google-home') {
+            steps {
+                script {
+                    docker.image('alpine').inside("-w ${WORKDIR}") {
+                        sh "wget www.google.com"
+                    }
+                }
+            }
+        }
+    }
+}

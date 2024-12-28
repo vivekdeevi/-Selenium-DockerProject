@@ -1,0 +1,10 @@
+Dec 28, 2024 11:19:00 AM hudson.remoting.Launcher createEngine
+INFO: Setting up agent: NODE1
+Dec 28, 2024 11:19:00 AM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 3261.v9c670a_4748a_9
+Dec 28, 2024 11:19:00 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using C:\Users\SDDVIVE\eclipse-workspace\Selenium-DockerProject\jenkinsci-cd\1.Jenkins\volumes\node\remoting as a remoting work directory
+Dec 28, 2024 11:19:00 AM hudson.remoting.Launcher$CuiListener status
+INFO: WebSocket connection open
+Dec 28, 2024 11:19:00 AM hudson.remoting.Launcher$CuiListener status
+INFO: Connected

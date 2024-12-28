@@ -1,0 +1,57 @@
+services:
+  hub:
+    image: selenium/hub:4.27
+    ports:
+    - 4444:4444
+  chrome:
+    image: selenium/node-chromium:4.27
+    shm_size: '8g'
+    depends_on:
+    - hub
+    environment:
+    - SE_EVENT_BUS_HOST=hub
+    - SE_EVENT_BUS_PUBLISH_PORT=4442
+    - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+    - SE_NODE_MAX_SESSIONS=4
+    - SE_NODE_CHROMIUM_OPTS=--no-sandbox --disable-dev-shm-usage
+#    volumes:
+#      - /dev/shm:/dev/shm
+  firefox:
+    image: selenium/node-firefox:4.27
+    shm_size: '8g'
+    depends_on:
+    - hub
+    environment:
+    - SE_EVENT_BUS_HOST=hub
+    - SE_EVENT_BUS_PUBLISH_PORT=4442
+    - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+    - SE_NODE_MAX_SESSIONS=4
+    - SE_NODE_FIREFOX_OPTS=--no-sandbox --disable-dev-shm-usage
+#    volumes:
+#      - /dev/shm:/dev/shm
+  vendor-portal:
+    image: vivekd999/selenium
+    depends_on:
+    - chrome
+    environment:
+    - BROWSER=chrome
+    - HUB_HOST=hub
+    - THREAD_COUNT=3
+    - TEST_SUITE=vendor-portal.xml
+   # - SE_OPTS=--headless
+    volumes:
+    - ./output/vendor-portal:/home/selenium-docker/test-output
+  flight-reservation:
+    image: vivekd999/selenium
+    depends_on:
+    - firefox
+    environment:
+    - BROWSER=firefox
+    - HUB_HOST=hub
+    - THREAD_COUNT=3
+    - TEST_SUITE=flight-reservation.xml
+  # - SE_OPTS=--headless
+    volumes:
+    - ./output/flight-reservation:/home/selenium-docker/test-output  
